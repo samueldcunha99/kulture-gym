@@ -45,3 +45,9 @@ The policy page explains data use and contact-based deletion requests. Close enq
 ## Hosting
 
 `.openai/hosting.json` retains the Site ID and logical D1 binding. Sites owns the database and applies saved migrations. Worker output is ESM with a default `fetch` handler and serves public files through the assets binding.
+
+## Campaign design update
+
+The new campaign uses three original images generated with the built-in image tool. The website assets are `public/assets/campaign-strength.webp`, `campaign-energy.webp`, and `campaign-detail.webp` (about 360 KB total). Their exact prompts and generation provenance are in `design/campaign-prompts.json`. Campaign models are illustrative and are not presented as real trainers, customers, or results. The club gallery continues to use the owner's actual gym photos.
+
+`campaign.mjs` owns the updated home page and campaign sections; `public/assets/campaign.css` carries the matching visual direction across all pages. Page transitions, scroll reveals, and subtle desktop image movement respect reduced-motion settings. Existing enquiry, content editing, and staff permissions are unchanged.

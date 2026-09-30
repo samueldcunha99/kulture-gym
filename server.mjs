@@ -5,7 +5,7 @@ import {openDatabase} from './local-db.mjs';
 import path from 'node:path';
 const root=path.resolve('dist/client');
 const DB=openDatabase();
-const types={'.html':'text/html; charset=utf-8','.css':'text/css','.js':'text/javascript','.png':'image/png','.jpg':'image/jpeg','.jpeg':'image/jpeg','.svg':'image/svg+xml'};
+const types={'.html':'text/html; charset=utf-8','.css':'text/css','.js':'text/javascript','.webp':'image/webp','.png':'image/png','.jpg':'image/jpeg','.jpeg':'image/jpeg','.svg':'image/svg+xml'};
 const ASSETS={async fetch(request){try{const url=new URL(request.url);let file=path.resolve(root,'.'+decodeURIComponent(url.pathname));if(!file.startsWith(root+path.sep)&&file!==root)throw Error();if(!path.extname(file))file=path.join(file,'index.html');const data=await readFile(file);return new Response(data,{headers:{'Content-Type':types[path.extname(file)]||'application/octet-stream'}});}catch{return new Response('Page not found',{status:404});}}};
 http.createServer(async(req,res)=>{try{const headers=new Headers();for(const [k,v] of Object.entries(req.headers))if(v&&!k.startsWith('oai-authenticated-user-'))headers.set(k,Array.isArray(v)?v.join(','):v);const url='http://127.0.0.1:4173'+req.url;const cookies=headers.get('cookie')||'';
 if(req.url.startsWith('/signin-with-chatgpt')){res.writeHead(302,{'Set-Cookie':'local_owner=1; HttpOnly; SameSite=Lax; Path=/','Location':'/admin/'});res.end();return;}

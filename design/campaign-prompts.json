@@ -1,0 +1,18 @@
+{
+  "mode": "built-in image_gen",
+  "request_count": 3,
+  "assets": [
+    {
+      "filename": "campaign-strength.png",
+      "prompt": "Use case: ads-marketing\nAsset type: final landscape 3:2 website hero campaign photograph for Kulture Fitness Club.\nPrimary request: Premium editorial sports campaign for an Indian strength gym. An athletic adult Indian man wearing a black sleeveless training top prepares his hands with chalk before a lift.\nScene/backdrop: dark abstract gym backdrop, charcoal and black, understated and believable.\nComposition/framing: landscape 3:2 image; waist-up profile or three-quarter view with the man occupying the RIGHT half; broad dark negative space across the LEFT half suitable for a website headline. Frame both hands clearly in a natural chalk preparation gesture.\nStyle/medium: dramatic but believable professional sports photography, gritty elegance, tangible skin and chalk texture, natural athletic physique.\nLighting/mood: elegant side light with restrained electric indigo-blue rim lighting.\nConstraints: fictional campaign model, not a representation of actual gym staff, members, facility, or results. Anatomically plausible hands and body. No dumbbells in this shot. No text, logos, watermarks, collage, or panels."
+    },
+    {
+      "filename": "campaign-energy.png",
+      "prompt": "Use case: ads-marketing\nAsset type: final portrait 4:5 website training campaign photograph for Kulture Fitness Club.\nPrimary request: Premium editorial sports campaign for an Indian strength gym. An athletic adult Indian woman in modest dark sleeveless training clothes stands holding one dumbbell in each hand, straight arms naturally down at her sides, with a strong calm expression.\nScene/backdrop: plain graphite gym studio background.\nComposition/framing: portrait 4:5 image; training campaign composition showing her head, torso, arms, both hands, both dumbbells, and upper legs, with clear uncomplicated silhouettes. Each hand grips the handle of its own dumbbell naturally.\nStyle/medium: dramatic but believable professional sports photography, natural athletic physique, tangible skin and dark metal textures.\nLighting/mood: controlled elegant side light and restrained electric indigo-blue rim lighting, charcoal and black palette.\nConstraints: fictional adult campaign model, not a trainer portrait or representation of actual gym staff, members, facility, or results. Correct natural anatomy, exactly two arms and two hands, realistic fingers and grip, one dumbbell in each hand. No text, logos, watermarks, collage, or panels."
+    },
+    {
+      "filename": "campaign-detail.png",
+      "prompt": "Use case: ads-marketing\nAsset type: final landscape 3:2 macro website campaign photograph for Kulture Fitness Club.\nPrimary request: Premium editorial sports campaign still life of adult athletic hands gripping a knurled barbell at rest, with subtle floating chalk.\nScene/backdrop: deep charcoal and black abstract background, worn black gym metal.\nComposition/framing: landscape 3:2 macro photograph, close crop showing two plausible adult hands wrapped naturally around one horizontal knurled barbell, cropped forearms entering the frame, no face. The barbell is at rest; emphasize the tactile grip and subtle fine chalk in the air.\nStyle/medium: dramatic but believable professional sports photography, crisp knurled metal, realistic skin creases and chalk texture.\nLighting/mood: restrained electric indigo edge lighting with elegant low side light.\nConstraints: fictional campaign image, not actual gym staff, members, facility, or results. Anatomically plausible hands, fingers and wrists. No extra hands or fingers, no text, logos, watermarks, collage, or panels."
+    }
+  ]
+}

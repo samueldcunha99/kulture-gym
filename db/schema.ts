@@ -1,0 +1,6 @@
+import {sqliteTable,text,integer,index} from 'drizzle-orm/sqlite-core';
+export const leads=sqliteTable('leads',{id:text('id').primaryKey(),name:text('name').notNull(),phone:text('phone').notNull(),interest:text('interest').notNull(),visitDate:text('visit_date').notNull(),visitTime:text('visit_time').notNull(),message:text('message').notNull(),status:text('status').notNull().default('New'),notes:text('notes').notNull().default(''),assignedTo:text('assigned_to').notNull(),createdAt:integer('created_at').notNull(),updatedAt:integer('updated_at').notNull(),network:text('network').notNull()},t=>[index('idx_leads_status_created').on(t.status,t.createdAt),index('idx_leads_network_created').on(t.network,t.createdAt)]);
+export const settings=sqliteTable('settings',{key:text('key').primaryKey(),value:text('value').notNull()});
+export const staff=sqliteTable('staff',{userId:text('user_id').primaryKey(),name:text('name').notNull()});
+export const challenges=sqliteTable('challenges',{id:text('id').primaryKey(),answer:text('answer').notNull(),expiresAt:integer('expires_at').notNull(),network:text('network').notNull(),createdAt:integer('created_at').notNull()},t=>[index('idx_challenges_network_created').on(t.network,t.createdAt)]);
+export const metrics=sqliteTable('metrics',{key:text('key').primaryKey(),count:integer('count').notNull().default(0)});

@@ -1,1 +1,1 @@
-{"name":"kulture-fitness-club","private":true,"type":"module","scripts":{"build":"node build.mjs","dev":"node dev-server.mjs","check":"node verify.mjs"},"devDependencies":{"@cloudflare/workers-types":"^5.20260930.2","drizzle-kit":"^0.31.11","drizzle-orm":"^0.45.3"}}
+{"name":"kulture-fitness-club","private":true,"type":"module","main":"index.js","scripts":{"build":"node build.mjs","dev":"node dev-server.mjs","check":"node verify.mjs"},"devDependencies":{"@cloudflare/workers-types":"^5.20260930.2","drizzle-kit":"^0.31.11","drizzle-orm":"^0.45.3"}}

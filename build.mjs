@@ -30,9 +30,13 @@ function layout(id,title,body){
 }
 await mkdir('dist/client/assets',{recursive:true});
 await cp('public/assets','dist/client/assets',{recursive:true});
-await mkdir('dist/server',{recursive:true});
-await cp('worker.mjs','dist/server/index.js');
-await cp('default-content.mjs','dist/server/default-content.mjs');
+try {
+  if (!process.env.VERCEL) {
+    await mkdir('dist/server',{recursive:true});
+    await cp('worker.mjs','dist/server/index.js');
+    await cp('default-content.mjs','dist/server/default-content.mjs');
+  }
+} catch {}
 for(const [id,title,url] of routes){const dir='dist/client'+(url==='/'?'':url.slice(0,-1));await mkdir(dir,{recursive:true});let html=layout(id,title,content[id]());html=html.replace('<script src="/assets/app.js" defer></script>','<script src="/assets/app.js" defer></script><script src="/assets/live.js" defer></script><script src="/assets/premium.js" defer></script><script src="/assets/webmcp.js" defer></script>').replaceAll('${new Date().getFullYear()}','2026');html=html.replace(/<nav class="desktop-nav"[\s\S]*?<\/nav>/,`<nav class="desktop-nav" aria-label="Main navigation">${routes.slice(0,6).map(([key,label,link])=>`<a href="${link}" ${key===id?'aria-current="page"':''}>${label}</a>`).join('')}</nav>`);html=html.replace('Join the Kulture','Request a trial').replace('<footer>','<div class="contact-dock"><a href="tel:+919921587777" data-track="call">Call the club</a><a href="https://wa.me/919921587777" data-track="whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp us</a></div><footer>');if(id==='admin')html=html.replace('<meta name="description"','<meta name="robots" content="noindex,nofollow"><meta name="description"');await writeFile(dir+'/index.html',html);}
 await writeFile('dist/client/assets/favicon.svg','<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#101013"/><path d="M17 12h9v19L41 12h12L34 35l19 17H40L26 38v14h-9z" fill="#a897ff"/><path d="M41 12h12L39 29l-7-5z" fill="#6446ff"/></svg>');
 
